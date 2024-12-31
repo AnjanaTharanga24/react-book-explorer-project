@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
+import DisplayBooks from '../components/DisplayBooks'
 
 function Home() {
   return (
@@ -10,7 +11,7 @@ function Home() {
       </div>
 
       <div className='section2'>
-
+          <DisplayBooks/>
       </div>
 
 

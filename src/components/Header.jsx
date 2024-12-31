@@ -9,11 +9,11 @@ function Header() {
 
         <h1 className="title ">Book Explorer</h1>
 
-
         <div className="search-bar d-flex">
            <input className="form-control " placeholder="Search your book"/>
-           <button className="btn btn-primary ms-2">
+           <button className="btn btn-primary ms-2 fs-5">
            <i className="fas fa-search" />
+            <span className="ms-2">Search</span>
            </button>
         </div>
 
