@@ -1,17 +1,47 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import DisplayBooks from '../components/DisplayBooks'
+import '../css/style.css'
+import axios from 'axios';
 
 function Home() {
+    const [search, setSearch] = useState("");
+    const [books, setBooks] = useState([]);
+
+    // useEffect(()=>{
+    //     handleSearch();
+    // })
+  
+    const handleSearch = async () => {
+      try {
+        console.log(search);
+        const response = await axios.get(
+          "https://www.googleapis.com/books/v1/volumes?q=" +
+            search +
+            "&key=AIzaSyCbqSJKCL9E0bojQNKLL6V8MY68cXA_ch4"
+        );
+        setBooks(response.data.items);
+        console.log(response.data.items);
+      } catch (error) {
+        console.log(error);
+      }
+    };
   return (
     <div>
 
       <div className='section1'>
-          <Header/>
+          <Header search={search} setSearch={setSearch} handleSearch={handleSearch}/>
       </div>
 
       <div className='section2'>
-          <DisplayBooks/>
+      {
+        books.length === 0 && (
+          <div className='loader'>
+            <h3>Loading...</h3>
+          </div>
+        )
+      }
+          <DisplayBooks books={books}/>
       </div>
 
 

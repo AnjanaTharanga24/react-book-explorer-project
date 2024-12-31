@@ -63,25 +63,35 @@
 .book-container{
     background-color: rgb(28, 38, 56);
     max-width: 100%;
-    height: 100%;
+    height: 1000px;
 }
 
 .book-card{
-    height: 300px;
+    height: auto;
     width: 250px;
     margin-left: 40px;
     margin-top: 40px;
     background-color: rgb(8, 12, 22);
     color: aliceblue;
     border-color: aliceblue;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
 }
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+   
+  }
 
 .book-img{
     width: 235px;
+    height: 180px;
     border-radius: 10px;
     margin-top: 5px;
     margin-left: -5px;
     border-color: aliceblue;
+}
+
+.loader{
+
 }
