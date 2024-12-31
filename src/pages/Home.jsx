@@ -8,9 +8,9 @@ function Home() {
     const [search, setSearch] = useState("");
     const [books, setBooks] = useState([]);
 
-    // useEffect(()=>{
-    //     handleSearch();
-    // })
+    useEffect(()=>{
+        handleSearch();
+    })
   
     const handleSearch = async () => {
       try {
@@ -37,7 +37,7 @@ function Home() {
       {
         books.length === 0 && (
           <div className='loader'>
-            <h3>Loading...</h3>
+            <h3 className='fs-1'>Loading...</h3>
           </div>
         )
       }
