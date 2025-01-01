@@ -8,9 +8,9 @@ function Home() {
     const [search, setSearch] = useState("");
     const [books, setBooks] = useState([]);
 
-    useEffect(()=>{
-        handleSearch();
-    })
+    // useEffect(()=>{
+    //     handleSearch();
+    // })
   
     const handleSearch = async () => {
       try {
@@ -18,7 +18,7 @@ function Home() {
         const response = await axios.get(
           "https://www.googleapis.com/books/v1/volumes?q=" +
             search +
-            "&key=AIzaSyCbqSJKCL9E0bojQNKLL6V8MY68cXA_ch4"
+            "&key=AIzaSyDH6zGq2jRCMnvhwTvZ2yjq4T8cL0T1VKc"
         );
         setBooks(response.data.items);
         console.log(response.data.items);

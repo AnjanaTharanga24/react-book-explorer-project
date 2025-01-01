@@ -19,7 +19,17 @@ function Header({search, setSearch, handleSearch}) {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
+
+          <button
+            className="btn btn-primary"
+            type="submit"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
         </div>
+
+
       </div>
     </div>
   );
