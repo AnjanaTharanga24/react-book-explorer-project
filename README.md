@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Book Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Book Explorer is a web application built using React and Bootstrap that allows users to search for books through the Google Books API. The application provides a seamless interface to browse books and view their details in a modal.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Search for books using the Google Books API.
+- Display a list of books based on the search query.
+- View detailed information about a selected book in a modal.
+- Responsive design using Bootstrap.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** React, Bootstrap, Axios
+- **API:** Google Books API
+- **Styling:** CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/book-explorer.git
+   cd book-explorer
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Add your Google Books API Key:**
+   - Replace `YOUR_API_KEY` in the `Home` component's `handleSearch` function with your actual Google Books API key.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Run the application:**
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Access the application:**
+   Open your browser and navigate to `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+```
+book-explorer/
+├── public/
+│   └── images/      # Images used in the application
+├── src/
+│   ├── components/  # Reusable React components
+│   │   ├── Header.jsx
+│   │   ├── DisplayBooks.jsx
+│   │   └── ModalBody.jsx
+│   ├── pages/       # Page-level components
+│   │   └── Home.jsx
+│   ├── css/         # Styling files
+│   │   └── style.css
+│   └── App.js       # Main application component
+├── package.json     # Project dependencies and scripts
+└── README.md        # Project documentation
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Key Components
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Header
+- Provides the search bar for users to input their queries.
+- Triggers the `handleSearch` function to fetch books.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### DisplayBooks
+- Displays a list of books based on the search results.
+- Each book is displayed as a card with a clickable image and title.
+- Clicking a card opens a modal with detailed book information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### ModalBody
+- Displays detailed information about the selected book, including its title, cover image, and description.
+- Handles cases where certain data fields (e.g., `imageLinks` or `description`) might be missing.
 
-## Learn More
+## Error Handling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- If no `imageLinks` or `description` are available for a book, the application provides appropriate fallbacks:
+  - Default placeholder image.
+  - "No description available" message.
+- If there are too many requests to the Google Books API, the error is logged to the console for debugging.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Enhancements
 
-### Code Splitting
+- Add pagination to handle large search result sets.
+- Improve error handling and user feedback for API rate limits (e.g., display a message to the user).
+- Implement user authentication and save favorite books.
+- Add advanced search filters (e.g., by author, publication date).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
+- [Google Books API](https://developers.google.com/books/docs/v1/getting_started) for providing book data.
+- [Bootstrap](https://getbootstrap.com/) for responsive UI components.
+- [FontAwesome](https://fontawesome.com/) for icons.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
