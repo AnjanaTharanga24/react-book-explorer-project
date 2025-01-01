@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo-2.png";
 import "../css/style.css";
-function Header() {
+import axios from "axios";
+function Header({search, setSearch, handleSearch}) {
+
   return (
     <div className="container text-white header">
       <div className="">
@@ -10,14 +12,24 @@ function Header() {
         <h1 className="title ">Book Explorer</h1>
 
         <div className="search-bar d-flex">
-           <input className="form-control " placeholder="Search your book"/>
-           <button className="btn btn-primary ms-2 fs-5">
-           <i className="fas fa-search" />
-            <span className="ms-2">Search</span>
-           </button>
+          <input
+            className="form-control "
+            placeholder="Search your book"
+            name="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+
+          <button
+            className="btn btn-primary"
+            type="submit"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
         </div>
 
-        
+
       </div>
     </div>
   );
