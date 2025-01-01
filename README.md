@@ -2,6 +2,12 @@
 
 Book Explorer is a web application built using React and Bootstrap that allows users to search for books through the Google Books API. The application provides a seamless interface to browse books and view their details in a modal.
 
+# ScreenShots
+
+![Screenshot 2025-01-01 111658](https://github.com/user-attachments/assets/e6227924-8cbf-42f8-9e1c-72ca111f52ea)
+
+![Screenshot 2025-01-01 111738](https://github.com/user-attachments/assets/ad452437-3fab-47ee-80eb-dd8935fc2617)
+
 ## Features
 
 - Search for books using the Google Books API.
@@ -74,23 +80,7 @@ book-explorer/
 - Displays detailed information about the selected book, including its title, cover image, and description.
 - Handles cases where certain data fields (e.g., `imageLinks` or `description`) might be missing.
 
-## Error Handling
 
-- If no `imageLinks` or `description` are available for a book, the application provides appropriate fallbacks:
-  - Default placeholder image.
-  - "No description available" message.
-- If there are too many requests to the Google Books API, the error is logged to the console for debugging.
-
-## Future Enhancements
-
-- Add pagination to handle large search result sets.
-- Improve error handling and user feedback for API rate limits (e.g., display a message to the user).
-- Implement user authentication and save favorite books.
-- Add advanced search filters (e.g., by author, publication date).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
