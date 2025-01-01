@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import logo from "../images/logo-2.png";
 import "../css/style.css";
 import axios from "axios";
-function Header({search, setSearch, handleSearch}) {
-
+function Header({ search, setSearch, handleSearch }) {
   return (
     <div className="container text-white header">
       <div className="">
@@ -28,8 +27,6 @@ function Header({search, setSearch, handleSearch}) {
             Search
           </button>
         </div>
-
-
       </div>
     </div>
   );
