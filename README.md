@@ -82,9 +82,6 @@ book-explorer/
 
 ### ModalBody
 - Displays detailed information about the selected book, including its title, cover image, and description.
-- Handles cases where certain data fields (e.g., `imageLinks` or `description`) might be missing.
-
-
 
 ## Acknowledgments
 
