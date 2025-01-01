@@ -4,7 +4,11 @@ Book Explorer is a web application built using React and Bootstrap that allows u
 
 # ScreenShots
 
+## after search
+
 ![Screenshot 2025-01-01 111658](https://github.com/user-attachments/assets/e6227924-8cbf-42f8-9e1c-72ca111f52ea)
+
+## modal body
 
 ![Screenshot 2025-01-01 111738](https://github.com/user-attachments/assets/ad452437-3fab-47ee-80eb-dd8935fc2617)
 
